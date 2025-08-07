@@ -15,7 +15,9 @@
         $sql = "UPDATE usuario SET nome='$name', email='$email' WHERE id='$id'";
 
         if($conn -> query($sql) === true){
-            echo "Registro atualizado com sucesso!";
+            echo "Registro atualizado com sucesso!
+                <a href='read.php'>Ver registros.</a>
+";
         }else{
             echo"Erro " . $sql . "<br>" . $conn->error;
         }
